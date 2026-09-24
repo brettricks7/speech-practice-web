@@ -1,0 +1,160 @@
+{
+  "targetSound": "s",
+  "targetPhoneme": "s",
+  "displayName": "/s/ Sound",
+  "categories": [
+    {
+      "id": "isolation",
+      "name": "Isolation",
+      "description": "Practice the /s/ sound by itself",
+      "words": [
+        {
+          "text": "sssss",
+          "referenceText": "sssss",
+          "targetPosition": "isolation"
+        },
+        {
+          "text": "ssss",
+          "referenceText": "ssss",
+          "targetPosition": "isolation"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "name": "Initial Position",
+      "description": "Words starting with /s/",
+      "words": [
+        {
+          "text": "sun",
+          "referenceText": "sun",
+          "targetPosition": "initial"
+        },
+        {
+          "text": "see",
+          "referenceText": "see",
+          "targetPosition": "initial"
+        },
+        {
+          "text": "soap",
+          "referenceText": "soap",
+          "targetPosition": "initial"
+        },
+        {
+          "text": "sad",
+          "referenceText": "sad",
+          "targetPosition": "initial"
+        },
+        {
+          "text": "sit",
+          "referenceText": "sit",
+          "targetPosition": "initial"
+        },
+        {
+          "text": "sock",
+          "referenceText": "sock",
+          "targetPosition": "initial"
+        },
+        {
+          "text": "say",
+          "referenceText": "say",
+          "targetPosition": "initial"
+        },
+        {
+          "text": "sip",
+          "referenceText": "sip",
+          "targetPosition": "initial"
+        }
+      ]
+    },
+    {
+      "id": "medial",
+      "name": "Medial Position",
+      "description": "Words with /s/ in the middle",
+      "words": [
+        {
+          "text": "basket",
+          "referenceText": "basket",
+          "targetPosition": "medial"
+        },
+        {
+          "text": "pencil",
+          "referenceText": "pencil",
+          "targetPosition": "medial"
+        },
+        {
+          "text": "messy",
+          "referenceText": "messy",
+          "targetPosition": "medial"
+        },
+        {
+          "text": "lesson",
+          "referenceText": "lesson",
+          "targetPosition": "medial"
+        },
+        {
+          "text": "baseball",
+          "referenceText": "baseball",
+          "targetPosition": "medial"
+        },
+        {
+          "text": "popsicle",
+          "referenceText": "popsicle",
+          "targetPosition": "medial"
+        },
+        {
+          "text": "dinosaur",
+          "referenceText": "dinosaur",
+          "targetPosition": "medial"
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "name": "Final Position",
+      "description": "Words ending with /s/",
+      "words": [
+        {
+          "text": "bus",
+          "referenceText": "bus",
+          "targetPosition": "final"
+        },
+        {
+          "text": "glass",
+          "referenceText": "glass",
+          "targetPosition": "final"
+        },
+        {
+          "text": "miss",
+          "referenceText": "miss",
+          "targetPosition": "final"
+        },
+        {
+          "text": "ice",
+          "referenceText": "ice",
+          "targetPosition": "final"
+        },
+        {
+          "text": "house",
+          "referenceText": "house",
+          "targetPosition": "final"
+        },
+        {
+          "text": "dress",
+          "referenceText": "dress",
+          "targetPosition": "final"
+        },
+        {
+          "text": "grass",
+          "referenceText": "grass",
+          "targetPosition": "final"
+        },
+        {
+          "text": "juice",
+          "referenceText": "juice",
+          "targetPosition": "final"
+        }
+      ]
+    }
+  ]
+}
