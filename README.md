@@ -2,28 +2,34 @@
 
 Live demo: **https://brettricks7.github.io/speech-practice-web/**
 
-Public GitHub Pages snapshot of the Speech Practice Flutter web build (mock scoring).  
+Public GitHub Pages snapshot of the Speech Practice Flutter web build (**mock scoring**).  
 **Source stays private** in [`brettricks7/carl`](https://github.com/brettricks7/carl) at `products/speech-practice/`.
 
-This site is built **without** Azure `--dart-define` keys, so it runs in **mock scoring** mode (UI review only).
+Built **without** Azure `--dart-define` keys → mock scoring banner for UI review only. No secrets in this repo.
 
 ## Redeploy
 
-From a machine with Flutter stable + `gh` authenticated as `brettricks7`:
+Needs: Flutter stable on PATH, `gh` auth as `brettricks7`, `rsync`.
 
 ```bash
-# 1) Get / update source (example: tarball extract)
+# 1) Fetch source (tarball; no full clone required)
 gh api repos/brettricks7/carl/tarball/main > /tmp/carl.tar.gz
-# extract products/speech-practice/ to SP_SRC
+PREFIX=$(tar -tzf /tmp/carl.tar.gz | head -1 | cut -d/ -f1)
+rm -rf /tmp/sp-src && mkdir -p /tmp/sp-src
+tar -xzf /tmp/carl.tar.gz -C /tmp/sp-src --strip-components=2 \
+  "${PREFIX}/products/speech-practice"
 
-# 2) Build (mock mode = no Azure dart-defines)
-cd "$SP_SRC"
+# 2) Build mock web for project Pages
+cd /tmp/sp-src
 flutter pub get
 flutter build web --release --base-href=/speech-practice-web/
 
-# 3) Publish build/web to this repo's gh-pages branch
+# 3) Publish ONLY build/web to gh-pages (include .nojekyll)
 rm -rf /tmp/sp-pages && mkdir /tmp/sp-pages
 rsync -a --delete --exclude='.last_build_id' build/web/ /tmp/sp-pages/
+touch /tmp/sp-pages/.nojekyll
+# optional: copy this README into /tmp/sp-pages/
+
 cd /tmp/sp-pages
 git init
 git checkout -b gh-pages
@@ -34,4 +40,4 @@ git remote add origin https://github.com/brettricks7/speech-practice-web.git
 git push -f origin gh-pages
 ```
 
-Pages source: branch `gh-pages`, folder `/`.
+Pages: branch `gh-pages`, folder `/` → https://brettricks7.github.io/speech-practice-web/
